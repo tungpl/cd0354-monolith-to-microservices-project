@@ -14,19 +14,20 @@ before_script:
   - echo "started"
 
 script:
-  - docker --version # print the version for logging
-  - docker build -t udagram-api ./udagram-api
-  - docker tag udagram-api tungpl/udagram-api:v1
+  - docker --version # print the version for logging  
   - docker build -t udagram-api-feed ./udagram-api-feed
   - docker tag udagram-api-feed tungpl/udagram-api-feed:v1
   - docker build -t udagram-api-user ./udagram-api-user
   - docker tag udagram-api-user tungpl/udagram-api-user:v1
   - docker build -t udagram-api-frontend ./udagram-api-frontend
   - docker tag udagram-api-frontend tungpl/udagram-api-frontend:v1
+  - docker build -t udagram-api-reverseproxy ./udagram-api-reverseproxy
+  - docker tag udagram-api-reverseproxy tungpl/udagram-api-reverseproxy:v1
 
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push tungpl/udagram-api:v1
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin  
   - docker push tungpl/udagram-api-feed:v1
   - docker push tungpl/udagram-api-user:v1
   - docker push tungpl/udagram-api-frontend:v1
+  - docker push tungpl/udagram-api-reverseproxy:v1
+

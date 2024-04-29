@@ -29,5 +29,5 @@ after_success:
   - docker push tungpl/udagram-api-feed:v1
   - docker push tungpl/udagram-api-user:v1
   - docker push tungpl/udagram-frontend:v1
-  - docker push tungpl/udagram-api-reverseproxy:v1
+  - docker push tungpl/udagram-reverseproxy:v1
 

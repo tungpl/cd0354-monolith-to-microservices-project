@@ -15,7 +15,7 @@ spec:
         app: reverseproxy
     spec:
       containers:
-      - name: simple-api
+      - name: reverseproxy
         image: tungpl/reverseproxy:v1
         ports:
         - containerPort: 80

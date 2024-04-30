@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: simple-api
+      - name: frontend
         image: tungpl/udagram-frontend:v1
         ports:
         - containerPort: 80

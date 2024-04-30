@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: tungpl/reverseproxy:v1
+        image: tungpl/reverseproxy:v1.1
         ports:
         - containerPort: 80

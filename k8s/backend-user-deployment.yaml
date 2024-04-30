@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: backend-user
-        image: tungpl/udagram-api-user:v1
+        image: tungpl/udagram-api-user:v1.1
         ports:
         - containerPort: 80

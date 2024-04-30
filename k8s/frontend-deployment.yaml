@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: tungpl/udagram-frontend:v1
+        image: tungpl/udagram-frontend:v1.1
         ports:
         - containerPort: 80
